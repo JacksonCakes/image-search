@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Preview Image Before Upload | CodingNepal</title>
+      <link rel="stylesheet" href="../static/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="container">
+         <div class="wrapper">
+            <div class="image">
+               <img class="upload_img" id="img_preview" src="" alt="">
+            </div>
+            <div class="content">
+               <div class="icon">
+                  <i class="fas fa-cloud-upload-alt"></i>
+               </div>
+               <div class="text">
+                  No file chosen, yet!
+               </div>
+            </div>
+            <div id="cancel-btn">
+               <i class="fas fa-times"></i>
+            </div>
+            <div class="file-name">
+               
+            </div>
+         </div>
+         <button id="custom-btn">Choose a file</button>
+         <button id="search-btn">Search</button>
+         <input id="default-btn" type="file" hidden>
+        
+      </div>
+      
+      <div class="gallery">
+         <div id="targetLayer" style="display:none; "></div>
+      </div>
+      <script src="../static/script.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   </body>
+</html>

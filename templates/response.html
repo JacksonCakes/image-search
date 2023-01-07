@@ -1,0 +1,9 @@
+{% if filenames %}
+    {% for name,img in filenames %}
+  <div class="images" style="padding:20px;float: left;">
+    <img src="{{'data:image/jpeg;base64,'+img}}" > 
+    <figcaption>{{name}}</figcaption>
+  </div>
+
+    {% endfor %}
+{% endif %}
