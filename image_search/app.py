@@ -23,7 +23,7 @@ def search_img():
 	img_data = re.sub('^data:image/.+;base64,', '', request.form['imageBase64'])
 	img_raw = Image.open(BytesIO(base64.b64decode(img_data)))
 	with torch.no_grad():
-		target = model.encode_image(preprocess(img_raw.resize((192,256))).unsqueeze(0).to(device))
+		target = model.encode_image(preprocess(img_raw)).unsqueeze(0).to(device)
 	top_img = compute_similarity(target,embeddings)
 	return jsonify({'htmlresponse': render_template('./response.html', filenames=top_img)}) 
 

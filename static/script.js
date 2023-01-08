@@ -6,7 +6,7 @@ const customBtn = document.querySelector("#custom-btn");
 const cancelBtn = document.querySelector("#cancel-btn i");
 const searchBtn = document.querySelector("#search-btn");
 const img = document.querySelector("#img_preview");
-let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+
   
 function defaultBtnActive(){
     defaultBtn.click();
@@ -15,9 +15,7 @@ function defaultBtnActive(){
 defaultBtn.addEventListener("change", function(){
     const file = this.files[0];
     setPreviewImg(file);
-    if(this.value){
-        let valueStore = this.value.match(regExp);
-        fileName.textContent = valueStore;}
+
 });
 
 window.addEventListener("paste", e=>
